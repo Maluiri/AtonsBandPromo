@@ -25,13 +25,14 @@ body {
     background-repeat: no-repeat;
     /*background-size:center;*/
     background-position: 40em 0.5em ;
-    align-items: center;
+    /*align-items: center;*/
     text-align: center;
     /*comentario dentro da classe */
+    
 }
 
 .container {
-    height: 100vh; 
+    height: 90vh; 
     display: grid;
     grid-template-columns: 33% 33% 33%;
 }
@@ -52,12 +53,14 @@ body {
 }
 
 .video1 {
-    width: 560px;
-    margin: auto 15em;
+    width: 1060px;
+    
+    margin: -2em 15em;
+    
 }
 .video2 {
-    width: 560px;
-    margin: 0.9em 15em;
+    width: 1060px;
+    margin: 4em 15em;
 }
 
 .container__aviso {
@@ -80,11 +83,13 @@ body {
 
 .secundario__imagem {
     width: 80%;
+    
+    margin: 0 1em;
 }
 
 .secundario {
     align-items: center;
-    margin: 0 10em;
+    margin: 0 0em;
 }
 
 .descricao__titulo {
@@ -108,4 +113,54 @@ body {
 .container__botao:hover {
     background-color: var(--botao-azul-efeito);
     color: var(--cor-de-fundo);
+}
+
+/*a partir daqui faço a responssividade para funcionar legal em celular*/
+@media screen and (max-width: 768px) {
+    .container {
+        display: block;
+        background-image: none;
+        
+    }
+    .container__imagem {
+        width: 50vw;
+    }
+    .container__caixa {
+        margin: 1em 0.5em;
+                
+    }
+    .principal {
+        display: inline;
+    }
+    .video1 {
+        margin: 0.2em;
+        width: 98vw;
+    }
+    .video2 {
+        margin: 0.2em;
+        width: 98vw;
+    }
+    .secundario__imagem {
+        width: 100vw;
+    
+    }
+    .secundario {
+        margin: 0.2em;
+        width: 98vw;
+        font-size: 15px;
+        display: inline;
+        text-align: center;
+    }
+  
+    .rodape {
+        text-align: center;
+    }
+    .rodape__texto {
+        margin: 0;
+        font-size: 13px;
+        width: 100vw;
+        
+    }
+    
+
 }
